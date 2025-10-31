@@ -39,11 +39,11 @@ Tampilan modern dengan desain biru lembut dan pengaturan intuitif.
 
 ### 🧾 Halaman Tampilan 
 Tampilan layar penuh dengan:
-- Judul “Tes Kemampuan Akademik 2025”
+- Token yang realtime dari pengaturan
 - Nama sekolah
 - Waktu dan tanggal otomatis
-- Token besar di tengah layar putih dengan teks biru tua
-- Tulisan “Semoga Sukses” di bagian bawah
+
+
 
 ---
 
