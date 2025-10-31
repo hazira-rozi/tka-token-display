@@ -1,0 +1,172 @@
+body {
+  font-family: 'Lexend', sans-serif;
+  background-color: #1e67c0;
+  color: #003366;
+  margin: 0;
+  padding: 0;
+}
+
+/* === INDEX PAGE === */
+.container {
+  max-width: 480px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #003366;
+  font-size: 1.8rem;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccd;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.color-picker-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.color-value {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #003366;
+}
+
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #e0e7ef;
+  color: #003366;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ccd8ea;
+}
+
+.btn.primary {
+  background: #003366;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #002a55;
+}
+
+.note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* === DISPLAY PAGE === */
+.display-page {
+  background-color: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.display-container {
+  text-align: center;
+  color: #ffffff;
+}
+
+.tka-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#schoolNameDisplay {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+#dateTime {
+  font-size: 1rem;
+  color: #cce0ff;
+  margin-bottom: 25px;
+}
+
+.token-box {
+  display: inline-block;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #003366;
+  border-radius: 20px;
+  padding: 25px 50px;
+  font-size: 80px;
+  min-width: 180px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.footer-msg {
+  font-size: 1.3rem;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .tka-title {
+    font-size: 1.4rem;
+  }
+  #schoolNameDisplay {
+    font-size: 1.2rem;
+  }
+  .token-box {
+    font-size: 10vw;
+    padding: 16px 24px;
+  }
+}

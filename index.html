@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan Token TKA</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pengaturan Token TKA</h1>
+
+      <label>Nama Sekolah</label>
+      <input
+        type="text"
+        id="schoolName"
+        placeholder="Contoh: SMKN 1 Singkarak"
+      />
+
+      <label>Token</label>
+      <input type="text" id="token" placeholder="Masukkan TOKEN" />
+
+      <label>Warna Token</label>
+      <div class="color-picker-wrapper">
+        <input type="color" id="color" value="#003366" />
+        <span id="colorValue" class="color-value">#003366</span>
+      </div>
+
+      <label>Ukuran Token: <span id="sizeValue">64</span> px</label>
+      <input type="range" id="size" min="32" max="300" value="64" step="1" />
+
+      <div class="button-group">
+        <button id="updateToken" class="btn">Update Token</button>
+        <button id="openDisplay" class="btn primary">Update & Tampilkan</button>
+      </div>
+
+      <p class="note">
+        Perubahan akan tersimpan otomatis dan tampil secara realtime di layar
+        token.
+      </p>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
