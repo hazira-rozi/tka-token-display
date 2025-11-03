@@ -57,6 +57,14 @@ document.getElementById("openDisplay")?.addEventListener("click", () => {
         popup.document.open();
         popup.document.write(htmlWithBase);
         popup.document.close();
+        
+        // Tunggu sampai script di popup selesai dimuat
+        popup.addEventListener('load', () => {
+          // Kirim data terkini ke display yang baru dibuka
+          const currentData = getData();
+          saveData(currentData);
+          sendData(currentData);
+        });
       })
       .catch((err) => {
         console.error(err);
