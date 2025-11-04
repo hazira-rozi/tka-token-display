@@ -157,6 +157,14 @@ input[type="range"] {
   color: #ffffff;
 }
 
+.footer-msg.small-credit {
+  font-size: 0.65rem;
+  margin-top: 15px;
+  opacity: 0.6;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
 /* Responsif */
 @media (max-width: 600px) {
   .tka-title {
