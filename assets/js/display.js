@@ -2,7 +2,7 @@ const displayChannel = new BroadcastChannel("tkaToken");
 
 function renderDisplay(data) {
   const nameEl = document.getElementById("schoolNameDisplay");
-  const tokenEl = document.getElementById("tokenDisplay");
+  const tokenEl = document.getElementById("tokenDisplay").toUpperCase();
 
   nameEl.textContent = data.school || "SMKN 1 Singkarak";
   tokenEl.textContent = data.token || "TOKEN";
