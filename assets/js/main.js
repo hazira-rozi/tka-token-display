@@ -1,9 +1,27 @@
 const updateChannel = new BroadcastChannel("tkaToken");
 
+// Input teks yang selalu dikunci UPPERCASE
+const UPPER_IDS = ["schoolName", "token"];
+
+// Daftarkan DULU sebelum listener updateAndSend, supaya nilai sudah kapital
+UPPER_IDS.forEach((id) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  el.style.textTransform = "uppercase"; // tampilan langsung kapital
+
+  el.addEventListener("input", () => {
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    el.value = el.value.toUpperCase();
+    el.setSelectionRange(start, end); // kursor tidak lompat ke akhir
+  });
+});
+
 function getData() {
   return {
-    school: document.getElementById("schoolName")?.value || "SMKN 1 Singkarak",
-    token: document.getElementById("token")?.value || "TOKEN",
+    school: (document.getElementById("schoolName")?.value || "SMKN 1 Singkarak").toUpperCase(),
+    token: (document.getElementById("token")?.value || "TOKEN").toUpperCase(),
     color: document.getElementById("color")?.value || "#003366",
     size: parseInt(document.getElementById("size")?.value || "64"),
   };
@@ -57,9 +75,9 @@ document.getElementById("openDisplay")?.addEventListener("click", () => {
         popup.document.open();
         popup.document.write(htmlWithBase);
         popup.document.close();
-        
+
         // Tunggu sampai script di popup selesai dimuat
-        popup.addEventListener('load', () => {
+        popup.addEventListener("load", () => {
           // Kirim data terkini ke display yang baru dibuka
           const currentData = getData();
           saveData(currentData);
@@ -86,8 +104,8 @@ document.getElementById("openDisplay")?.addEventListener("click", () => {
 window.addEventListener("load", () => {
   const saved = JSON.parse(localStorage.getItem("tkaSettings"));
   if (saved) {
-    document.getElementById("schoolName").value = saved.school;
-    document.getElementById("token").value = saved.token;
+    document.getElementById("schoolName").value = (saved.school || "").toUpperCase();
+    document.getElementById("token").value = (saved.token || "").toUpperCase();
     document.getElementById("color").value = saved.color;
     document.getElementById("size").value = saved.size;
     document.getElementById("colorValue").textContent = saved.color;

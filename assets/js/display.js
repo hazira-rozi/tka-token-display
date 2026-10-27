@@ -1,13 +1,14 @@
+console.log("display.js versi baru");
 const displayChannel = new BroadcastChannel("tkaToken");
 
 function renderDisplay(data) {
   const nameEl = document.getElementById("schoolNameDisplay");
   const tokenEl = document.getElementById("tokenDisplay");
 
-  nameEl.textContent = data.school || "SMKN 1 Singkarak";
-  tokenEl.textContent = data.token || "TOKEN";
+  nameEl.textContent = String(data.school || "SMKN 1 Singkarak").toUpperCase();
+  tokenEl.textContent = String(data.token || "TOKEN").toUpperCase();
   tokenEl.style.color = data.color || "#003366";
-  tokenEl.style.fontSize = `${data.size}px`;
+  tokenEl.style.fontSize = `${data.size || 64}px`;
 }
 
 function updateDateTime() {
