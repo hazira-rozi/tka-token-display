@@ -1,3 +1,4 @@
+console.log("display.js versi baru");
 const displayChannel = new BroadcastChannel("tkaToken");
 
 function renderDisplay(data) {
